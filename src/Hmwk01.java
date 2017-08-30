@@ -57,6 +57,7 @@ public class Hmwk01 {
             System.err.println("File \""+file.getName()+"\" does not contain any integers.");
             System.exit(1);
         }
+        scanner.close();
         //Returns an array of integers found in the file.
         return result;
     }
@@ -105,6 +106,7 @@ public class Hmwk01 {
             System.err.println("File \""+file.getName()+"\" does not contain any integers.");
             System.exit(1);
         }
+        scanner.close();
         //Returns the number of integers found in the file.
         return result;
     }
