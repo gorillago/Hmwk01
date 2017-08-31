@@ -44,6 +44,8 @@ public class Hmwk01 {
                         System.out.println("\""+currentString+"\" is not an integer.");
                     }
                 }
+                input.close();
+
                 double average = (double)sum/(double)count;
                 double averageRounded = Math.round(average * 100.0) / 100.0;
 
