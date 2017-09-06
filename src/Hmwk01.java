@@ -46,14 +46,7 @@ public class Hmwk01 {
                 }
                 input.close();
 
-                double average = (double)sum/(double)count;
-                double averageRounded = Math.round(average * 100.0) / 100.0;
-
-                System.out.println(count + " integers read.");
-                System.out.println("Smallest: " + smallest);
-                System.out.println("Largest: " + largest);
-                System.out.println("Sum: " + sum);
-                System.out.println("Average: " + averageRounded);
+                printResults(count, smallest, largest, sum);
             }
             else {
                 System.out.println("\""+inputFile.getName()+"\" is empty.");
@@ -63,6 +56,17 @@ public class Hmwk01 {
         catch(FileNotFoundException e) {
             System.out.println("\""+inputFile.getName()+"\" does not exist.");
         }
+    }
+
+    private static void printResults(int count, int smallest, int largest, int sum) {
+        double average = (double)sum/(double)count;
+        double averageRounded = Math.round(average * 100.0) / 100.0;
+
+        System.out.println(count + " integers read.");
+        System.out.println("Smallest: " + smallest);
+        System.out.println("Largest: " + largest);
+        System.out.println("Sum: " + sum);
+        System.out.println("Average: " + averageRounded);
     }
 
     private static boolean isInteger(String input) {
